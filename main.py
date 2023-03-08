@@ -19,8 +19,9 @@ def parse_pdf_file(pdf_path):
     text = page.extract_text()
     return text
 
+
 #%%
-def prepare_citations(pdf_dir,pattern):
+def prepare_citations(pdf_dir, pattern):
     citations = []
 
     for f in Path(pdf_dir).iterdir():
@@ -46,5 +47,4 @@ if __name__ == "__main__":
     with open("citations.txt", "w") as f:
         for c in citations:
             f.write(c + "\n")
-    
-# %%
+
